@@ -1,0 +1,216 @@
+<html>
+  <body>
+    <div id="mx">
+      <nav id="knoxville">
+        <button class="butt" onclick="change()">@</button>&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          id="ntx"
+          placeholder="Send a message..."
+        />&nbsp;&nbsp;&nbsp;
+        <button class="butt" onclick="philly()" id="snd">></button
+        >&nbsp;&nbsp;&nbsp;
+        <button class="butt" onclick="cldv()">Clear</button>&nbsp;&nbsp;&nbsp;
+        <button class="fckfck" onclick="fxten()">Fuck off x10</button>
+        <br /><br /><br />
+      </nav>
+      <nav id="kentucky">
+        <p id="superbowl"></p>
+      </nav>
+    </div>
+    <div id="mn"></div>
+  </body>
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      position: relative;
+      transition: 0.3s ease 0s;
+      background-color: #000000;
+    }
+    #mx {
+    }
+    #mn {
+      padding-top: 50px;
+      padding-bottom: 200px;
+      color: white;
+      font-family: Verdana;
+    }
+    #knoxville {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      border-top: 4px solid aqua;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1b2430;
+    }
+    #kentucky {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      border-top: 4px solid aqua;
+      border-bottom: 4px solid aqua;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1b2430;
+      color: white;
+      font-family: Verdana;
+      font-size: 40px;
+    }
+    #ntx {
+      width: 300px;
+      height: 25px;
+      background-color: #000000;
+      color: white;
+      border-radius: 10px;
+      border: 2px solid aqua;
+      font-family: Verdana;
+      font-size: 17px;
+    }
+    #ntx::placeholder {
+      color: rgb(147, 145, 145);
+      font-family: Verdana;
+    }
+    .butt,
+    .fckfck {
+      cursor: pointer;
+      background-color: #000000;
+      border-radius: 20px;
+      height: 25px;
+      width: 62px;
+      font-size: 17px;
+      border: 2px solid white;
+      transition: 0.3s ease 0s;
+      font-family: Verdana;
+      color: white;
+    }
+    .butt:hover,
+    .fckfck:hover {
+      transition: 0.3s ease 0s;
+      border-radius: 20%;
+      border: 2px solid aqua;
+      background-color: #2a2f4f;
+      color: aqua;
+    }
+    .fckfck {
+      width: 130px;
+    }
+    .out,
+    .owl {
+      display: flex;
+    }
+    .out {
+      justify-content: left;
+      align-items: left;
+    }
+    .owl {
+      justify-content: right;
+      align-items: right;
+    }
+    .ins,
+    .iks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      color: white;
+      max-width: 400px;
+      background-color: transparent;
+      font-family: Verdana;
+      font-size: 40px;
+      border-radius: 20px;
+    }
+    .ins {
+      border: 3px solid yellow;
+    }
+    .iks {
+      border: 3px solid #fb2576;
+    }
+  </style>
+  <script>
+    let dv = "";
+    let c = -1;
+
+    function philly() {
+      let v = document.getElementById("ntx").value;
+      if (
+        v == "" ||
+        v == " " ||
+        v == "  " ||
+        v == "   " ||
+        v == "    " ||
+        v == "     " ||
+        v == "      "
+      ) {
+      } else {
+        adx();
+      }
+    }
+
+    function change() {
+      c += 1;
+      var kentuckyElement = document.getElementById("kentucky");
+      var knox = document.getElementById("knoxville");
+      if (c % 2 == 0) {
+        document.getElementById("superbowl").innerHTML =
+          localStorage.getItem("namepx");
+        kentuckyElement.style.borderTop = "4px solid yellow";
+        kentuckyElement.style.borderBottom = "4px solid yellow";
+        knox.style.borderTop = "4px solid yellow";
+      } else {
+        document.getElementById("superbowl").innerHTML =
+          localStorage.getItem("namepo");
+        kentuckyElement.style.borderTop = "4px solid red";
+        kentuckyElement.style.borderBottom = "4px solid red";
+        knox.style.borderTop = "4px solid red";
+      }
+    }
+
+    change();
+
+    function clrr() {
+      document.getElementById("ntx").value = "";
+    }
+
+    function fxten() {
+      let inp = document.getElementById("ntx").value;
+      for (let i = 1; i <= 10; i += 1) {
+        inp += "Fuck off ";
+      }
+      document.getElementById("ntx").value = inp;
+      adx();
+    }
+
+    function adx() {
+      let inp = document.getElementById("ntx").value;
+      if (c % 2 == 0) {
+        dv +=
+          '<br><br><br><div class="out"><div class="ins">' +
+          inp +
+          "</div></div>";
+        document.getElementById("mn").innerHTML = dv;
+        clrr();
+      } else {
+        dv +=
+          '<br><br><br><div class="owl"><div class="iks">' +
+          inp +
+          "</div></div>";
+        document.getElementById("mn").innerHTML = dv;
+        clrr();
+      }
+    }
+
+    function cldv() {
+      dv = "";
+      document.getElementById("mn").innerHTML = dv;
+      clrr();
+    }
+  </script>
+</html>
